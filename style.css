@@ -1,228 +1,353 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
 
-  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-html,body
-    {
-        width: 100%;
-        height: 100%;
-        margin: 0px;
-        padding: 0px;
-        overflow-x: hidden; 
-    }
-    body {
-      background-color: #d1cece;
-    }
-    .dark{
-      background-color: #282c2f;
-    }
-    .light{
-      background-color: #c3c1c1
-      ;
-    }
+.example {
+  display: -ms-grid;
+  display: grid;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+  background: -o-linear-gradient(top, white, black);
+  background: linear-gradient(to bottom, white, black);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #d1cece;
+}
+
+.dark {
+  background-color: #282c2f;
+}
+
+.light {
+  background-color: #c3c1c1;
+}
+
 .calculator {
   height: 630px;
 }
-.calculator .calc-content{
+
+.calculator .calc-content {
   width: 400px;
   height: 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 20px;
   padding: 10px;
 }
-.calculator .calc-content .screen{
-   display: flex;
-   align-items: center;
+
+.calculator .calc-content .screen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 80%;
   height: 90px;
   background-color: rgb(243, 235, 237);
   border-radius: 15px;
   border: 2px solid;
 }
-.calculator .calc-content .screen span{
-   display: flex;
-   width:100%;
-   max-width: 16ch;
-   height: 90px;
-   word-break: break-all;
-   overflow: hidden;
-   font-size: 30px;
-   margin-left: 5px;
-   font-family: 'Roboto', sans-serif;
-   font-size: 30px;
-   /* max- */
+
+.calculator .calc-content .screen span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-width: 16ch;
+  height: 90px;
+  word-break: break-all;
+  overflow: hidden;
+  font-size: 30px;
+  margin-left: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  /* max- */
 }
- button {
-   position: relative;
-   border: none;
-   background: transparent;
-   padding: 0;
-   cursor: pointer;
-   outline-offset: 4px;
-   transition: filter 250ms;
-   user-select: none;
-   touch-action : manipulation;
- }
- 
- .shadow {
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   border-radius: 12px;
-   background: hsl(0deg 0% 0% / 0.25);
-   will-change: transform;
-   transform: translateY(2px);
-   transition: transform
-      600ms
-      cubic-bezier(.3, .7, .4, 1);
- }
- 
- .edge {
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   border-radius: 12px;
-   background: linear-gradient(
-      to left,
+
+button {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  -webkit-transition: -webkit-filter 250ms;
+  transition: -webkit-filter 250ms;
+  -o-transition: filter 250ms;
+  transition: filter 250ms;
+  transition: filter 250ms, -webkit-filter 250ms;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+.shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  -webkit-transform: translateY(2px);
+  -ms-transform: translateY(2px);
+  transform: translateY(2px);
+  -webkit-transition: -webkit-transform 600ms cubic-bezier(.3, .7, .4, 1);
+  transition: -webkit-transform 600ms cubic-bezier(.3, .7, .4, 1);
+  -o-transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+  transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+  transition: transform 600ms cubic-bezier(.3, .7, .4, 1), -webkit-transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: -webkit-gradient(linear,
+      right top, left top,
+      from(hsl(340deg 100% 16%)),
+      color-stop(8%, hsl(340deg 100% 32%)),
+      color-stop(92%, hsl(340deg 100% 32%)),
+      to(hsl(340deg 100% 16%)));
+  background: -o-linear-gradient(right,
       hsl(340deg 100% 16%) 0%,
       hsl(340deg 100% 32%) 8%,
       hsl(340deg 100% 32%) 92%,
-      hsl(340deg 100% 16%) 100%
-    );
- }
- 
- .front {
-   display: block;
-   position: relative;
-   padding: 12px 27px;
-   border-radius: 12px;
-   font-size: 1.1rem;
-   color: white;
-   background: hsl(345deg 100% 47%);
-   will-change: transform;
-   transform: translateY(-4px);
-   transition: transform
-      600ms
-      cubic-bezier(.3, .7, .4, 1);
- }
- 
- button:hover {
-   filter: brightness(110%);
- }
- 
- button:hover .front {
-   transform: translateY(-6px);
-   transition: transform
-      250ms
-      cubic-bezier(.3, .7, .4, 1.5);
- }
- 
- button:active .front {
-   transform: translateY(-2px);
-   transition: transform 34ms;
- }
- 
- button:hover .shadow {
-   transform: translateY(4px);
-   transition: transform
-      250ms
-      cubic-bezier(.3, .7, .4, 1.5);
-  }
-  
-  button:active .shadow {
-   transform: translateY(1px);
-   transition: transform 34ms;
-  }
-  
-  button:focus:not(:focus-visible) {
-   outline: none;
-  }
- /*butn2*/
- .shadow1 {
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   border-radius: 50%;
-   background: hsl(0deg 0% 0% / 0.25);
-   will-change: transform;
-   transform: translateY(2px);
-   transition: transform
-      600ms
-      cubic-bezier(.3, .7, .4, 1);
- }
- 
- .edge1 {
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   border-radius: 50%;
-   background: linear-gradient(
-      to left,
+      hsl(340deg 100% 16%) 100%);
+  background: linear-gradient(to left,
       hsl(340deg 100% 16%) 0%,
       hsl(340deg 100% 32%) 8%,
       hsl(340deg 100% 32%) 92%,
-      hsl(340deg 100% 16%) 100%
-    );
- }
- 
- .front1 {
-   display: block;
-   position: relative;
-   padding: 12px 27px;
-   border-radius: 50%;
-   font-size: 1.1rem;
-   color: rgb(5, 5, 5);
-   background: #dbdada;
-   will-change: transform;
-   transform: translateY(-4px);
-   transition: transform
-      600ms
-      cubic-bezier(.3, .7, .4, 1);
- }
- 
- button:hover {
-   filter: brightness(110%);
- }
- 
- button:hover .front1 {
-   transform: translateY(-6px);
-   transition: transform
-      250ms
-      cubic-bezier(.3, .7, .4, 1.5);
- }
- 
- button:active .front1 {
-   transform: translateY(-2px);
-   transition: transform 34ms;
- }
- 
- button:hover .shadow1 {
-   transform: translateY(4px);
-   transition: transform
-      250ms
-      cubic-bezier(.3, .7, .4, 1.5);
-  }
-  
-  button:active .shadow1 {
-   transform: translateY(1px);
-   transition: transform 34ms;
-  }
-  
-  button:focus:not(:focus-visible) {
-   outline: none;
-  }
- /*card*/
+      hsl(340deg 100% 16%) 100%);
+}
+
+.front {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: white;
+  background: hsl(345deg 100% 47%);
+  will-change: transform;
+  -webkit-transform: translateY(-4px);
+  -ms-transform: translateY(-4px);
+  transform: translateY(-4px);
+  -webkit-transition: -webkit-transform 600ms cubic-bezier(.3, .7, .4, 1);
+  transition: -webkit-transform 600ms cubic-bezier(.3, .7, .4, 1);
+  -o-transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+  transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+  transition: transform 600ms cubic-bezier(.3, .7, .4, 1), -webkit-transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+button:hover {
+  -webkit-filter: brightness(110%);
+  filter: brightness(110%);
+}
+
+button:hover .front {
+  -webkit-transform: translateY(-6px);
+  -ms-transform: translateY(-6px);
+  transform: translateY(-6px);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+  transition: -webkit-transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+  -o-transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+  transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+  transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5), -webkit-transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+button:active .front {
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  -webkit-transition: -webkit-transform 34ms;
+  transition: -webkit-transform 34ms;
+  -o-transition: transform 34ms;
+  transition: transform 34ms;
+  transition: transform 34ms, -webkit-transform 34ms;
+}
+
+button:hover .shadow {
+  -webkit-transform: translateY(4px);
+  -ms-transform: translateY(4px);
+  transform: translateY(4px);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+  transition: -webkit-transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+  -o-transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+  transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+  transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5), -webkit-transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+button:active .shadow {
+  -webkit-transform: translateY(1px);
+  -ms-transform: translateY(1px);
+  transform: translateY(1px);
+  -webkit-transition: -webkit-transform 34ms;
+  transition: -webkit-transform 34ms;
+  -o-transition: transform 34ms;
+  transition: transform 34ms;
+  transition: transform 34ms, -webkit-transform 34ms;
+}
+
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/*butn2*/
+.shadow1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  -webkit-transform: translateY(2px);
+  -ms-transform: translateY(2px);
+  transform: translateY(2px);
+  -webkit-transition: -webkit-transform 600ms cubic-bezier(.3, .7, .4, 1);
+  transition: -webkit-transform 600ms cubic-bezier(.3, .7, .4, 1);
+  -o-transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+  transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+  transition: transform 600ms cubic-bezier(.3, .7, .4, 1), -webkit-transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.edge1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: -webkit-gradient(linear,
+      right top, left top,
+      from(hsl(340deg 100% 16%)),
+      color-stop(8%, hsl(340deg 100% 32%)),
+      color-stop(92%, hsl(340deg 100% 32%)),
+      to(hsl(340deg 100% 16%)));
+  background: -o-linear-gradient(right,
+      hsl(340deg 100% 16%) 0%,
+      hsl(340deg 100% 32%) 8%,
+      hsl(340deg 100% 32%) 92%,
+      hsl(340deg 100% 16%) 100%);
+  background: linear-gradient(to left,
+      hsl(340deg 100% 16%) 0%,
+      hsl(340deg 100% 32%) 8%,
+      hsl(340deg 100% 32%) 92%,
+      hsl(340deg 100% 16%) 100%);
+}
+
+.front1 {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  color: rgb(5, 5, 5);
+  background: #dbdada;
+  will-change: transform;
+  -webkit-transform: translateY(-4px);
+  -ms-transform: translateY(-4px);
+  transform: translateY(-4px);
+  -webkit-transition: -webkit-transform 600ms cubic-bezier(.3, .7, .4, 1);
+  transition: -webkit-transform 600ms cubic-bezier(.3, .7, .4, 1);
+  -o-transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+  transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+  transition: transform 600ms cubic-bezier(.3, .7, .4, 1), -webkit-transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+button:hover {
+  -webkit-filter: brightness(110%);
+  filter: brightness(110%);
+}
+
+button:hover .front1 {
+  -webkit-transform: translateY(-6px);
+  -ms-transform: translateY(-6px);
+  transform: translateY(-6px);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+  transition: -webkit-transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+  -o-transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+  transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+  transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5), -webkit-transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+button:active .front1 {
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  -webkit-transition: -webkit-transform 34ms;
+  transition: -webkit-transform 34ms;
+  -o-transition: transform 34ms;
+  transition: transform 34ms;
+  transition: transform 34ms, -webkit-transform 34ms;
+}
+
+button:hover .shadow1 {
+  -webkit-transform: translateY(4px);
+  -ms-transform: translateY(4px);
+  transform: translateY(4px);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+  transition: -webkit-transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+  -o-transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+  transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+  transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5), -webkit-transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+button:active .shadow1 {
+  -webkit-transform: translateY(1px);
+  -ms-transform: translateY(1px);
+  transform: translateY(1px);
+  -webkit-transition: -webkit-transform 34ms;
+  transition: -webkit-transform 34ms;
+  -o-transition: transform 34ms;
+  transition: transform 34ms;
+  transition: transform 34ms, -webkit-transform 34ms;
+}
+
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/*card*/
 .card {
   width: 400px;
   height: 100%;
   background: #07182E;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   place-content: center;
   place-items: center;
@@ -233,15 +358,16 @@ html,body
 
 
 .calc-content h2 {
-   margin-top: 10px;
+  margin-top: 10px;
   z-index: 2;
   color: white;
   font-size: 2em;
   font-family: 'Orbitron', sans-serif;
 }
-.calc-content h2 span{
-   font-size: 0.7rem;
-   font-family: 'Orbitron', sans-serif;
+
+.calc-content h2 span {
+  font-size: 0.7rem;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .card::after {
@@ -252,129 +378,142 @@ html,body
   inset: 5px;
   border-radius: 15px;
   z-index: 1;
-}  
+}
+
 /* .card:hover:before {
-  background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);
-  animation: rotBGimg 3.5s linear infinite;
+background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);
+animation: rotBGimg 3.5s linear infinite;
 } */
 
 /*togel theme*/
 .switch {
-   --switch-width: 3.5em;
-   --switch-height: calc(var(--switch-width) / 2);
-   --left-ball-color: black;
-   --right-ball-color: white;
-   width: var(--switch-width);
-   height: var(--switch-height);
-   border-radius: calc(var(--switch-height) / 2);
-   background-color: var(--left-ball-color);
-   position: relative;
-   overflow: hidden;
- }
- 
- .switch input[type="checkbox"] {
-   width: 100%;
-   position: absolute;
-   height: 100%;
-   margin: 0;
-   opacity: 0;
- }
- 
- .switch .left {
-   position: absolute;
-   width: calc(var(--switch-width) / 3);
-   height: calc(var(--switch-height) / 1.5);
-   background-color: var(--left-ball-color);
-   border-radius: 50%;
-   left: calc((var(--switch-height) - (var(--switch-height) / 1.5)) / 2);
-   top: calc((var(--switch-height) - (var(--switch-height) / 1.5)) / 2);
-   z-index: 2;
-   pointer-events: none;
- }
- 
- .switch .right {
-   position: absolute;
-   width: calc(var(--switch-width) / 3);
-   height: calc(var(--switch-height) / 1.5);
-   background-color: var(--right-ball-color);
-   border-radius: 50%;
-   right: calc((var(--switch-height) - (var(--switch-height) / 1.5)) / 2);
-   top: calc((var(--switch-height) - (var(--switch-height) / 1.5)) / 2);
-   z-index: 2;
-   pointer-events: none;
- }
- 
- .switch .switcher {
-   position: absolute;
-   width: calc(100% + var(--switch-width) / 3);
-   height: 100%;
-   background-color: var(--right-ball-color);
-   z-index: 1;
-   left: calc(-50% + var(--switch-width) / (3 * 2));
-   pointer-events: none;
-   -webkit-transition: left 500ms ease;
-   transition: left 500ms ease;
-   border-top-left-radius: calc(var(--switch-width) / 3);
-   border-bottom-left-radius: calc(var(--switch-width) / 3);
- }
- 
- .switch .switcher:before {
-   position: absolute;
-   content: '';
-   width: calc(var(--switch-width) / 3);
-   height: 100%;
-   background-color: var(--left-ball-color);
-   display: block;
-   border-bottom-right-radius: 50%;
-   border-top-right-radius: 50%;
-   z-index: 2;
- }
- 
- .switch .switcher:after {
-   position: absolute;
-   content: '';
-   width: calc(var(--switch-width) / 3);
-   height: 100%;
-   background-color: var(--right-ball-color);
-   display: block;
-   border-bottom-left-radius: 50%;
-   border-top-left-radius: 50%;
- }
- 
- .switch input:checked ~ .switcher {
-   left: 100%;
- }
- 
- .switch input:checked ~ .switcher:before {
-   display: none;
- }
- /*media*/
+  --switch-width: 3.5em;
+  --switch-height: calc(var(--switch-width) / 2);
+  --left-ball-color: black;
+  --right-ball-color: white;
+  width: var(--switch-width);
+  height: var(--switch-height);
+  border-radius: calc(var(--switch-height) / 2);
+  background-color: var(--left-ball-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.switch input[type="checkbox"] {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+}
+
+.switch .left {
+  position: absolute;
+  width: calc(var(--switch-width) / 3);
+  height: calc(var(--switch-height) / 1.5);
+  background-color: var(--left-ball-color);
+  border-radius: 50%;
+  left: calc((var(--switch-height) - (var(--switch-height) / 1.5)) / 2);
+  top: calc((var(--switch-height) - (var(--switch-height) / 1.5)) / 2);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.switch .right {
+  position: absolute;
+  width: calc(var(--switch-width) / 3);
+  height: calc(var(--switch-height) / 1.5);
+  background-color: var(--right-ball-color);
+  border-radius: 50%;
+  right: calc((var(--switch-height) - (var(--switch-height) / 1.5)) / 2);
+  top: calc((var(--switch-height) - (var(--switch-height) / 1.5)) / 2);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.switch .switcher {
+  position: absolute;
+  width: calc(100% + var(--switch-width) / 3);
+  height: 100%;
+  background-color: var(--right-ball-color);
+  z-index: 1;
+  left: calc(-50% + var(--switch-width) / (3 * 2));
+  pointer-events: none;
+  -webkit-transition: left 500ms ease;
+  -o-transition: left 500ms ease;
+  transition: left 500ms ease;
+  border-top-left-radius: calc(var(--switch-width) / 3);
+  border-bottom-left-radius: calc(var(--switch-width) / 3);
+}
+
+.switch .switcher:before {
+  position: absolute;
+  content: '';
+  width: calc(var(--switch-width) / 3);
+  height: 100%;
+  background-color: var(--left-ball-color);
+  display: block;
+  border-bottom-right-radius: 50%;
+  border-top-right-radius: 50%;
+  z-index: 2;
+}
+
+.switch .switcher:after {
+  position: absolute;
+  content: '';
+  width: calc(var(--switch-width) / 3);
+  height: 100%;
+  background-color: var(--right-ball-color);
+  display: block;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+}
+
+.switch input:checked~.switcher {
+  left: 100%;
+}
+
+.switch input:checked~.switcher:before {
+  display: none;
+}
+
+/*media*/
 @media(max-width:322px) {
-   .calculator{
-      height: 500px;
-   }
-   .calculator .calc-content {
-      width: 300px;
-      height: 500px;
-   }
-   .calculator .calc-content .screen {
-      width: 90%;
-      height: 60px;
-   }
-   .calculator .calc-content .screen span{
-      font-size: 20px;
-      width: 100%;
-      height: 100%;
-   }
-   .calc-content h2{
-      font-size: 14px;
-   }
-   .calculator .calc-content .screen .math-op{
-      margin: auto;
-   }
-   button, .shadow, .shadow1, .edge, .edge1 {
-      height: 40px;
-      width: 40px;
-      
-   }
+  .calculator {
+    height: 500px;
+  }
+
+  .calculator .calc-content {
+    width: 300px;
+    height: 500px;
+  }
+
+  .calculator .calc-content .screen {
+    width: 90%;
+    height: 60px;
+  }
+
+  .calculator .calc-content .screen span {
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .calc-content h2 {
+    font-size: 14px;
+  }
+
+  .calculator .calc-content .screen .math-op {
+    margin: auto;
+  }
+
+  button,
+  .shadow,
+  .shadow1,
+  .edge,
+  .edge1 {
+    height: 40px;
+    width: 40px;
+
+  }
 }
