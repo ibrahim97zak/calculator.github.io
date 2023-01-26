@@ -48,7 +48,7 @@ html,body
    margin-left: 5px;
    font-family: 'Roboto', sans-serif;
    font-size: 30px;
-   max-
+   /* max- */
 }
  button {
    position: relative;
@@ -59,7 +59,7 @@ html,body
    outline-offset: 4px;
    transition: filter 250ms;
    user-select: none;
-   touch-action: manipulation;
+   touch-action : manipulation;
  }
  
  .shadow {
