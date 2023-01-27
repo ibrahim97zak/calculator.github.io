@@ -1,4 +1,4 @@
-let calBtn = Array.from(document.getElementsByClassName("button"));
+let calBtn = Array.from(document.getElementsByTagName("button"));
 let screen = document.getElementById("data");
 let toglebtn = document.getElementById("switch");
 let body = document.querySelector('body');
